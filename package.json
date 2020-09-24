@@ -1,0 +1,27 @@
+{
+  "name": "chocco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Galelya97/CHOCCO.git"
+  },
+  "author": "Galina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Galelya97/CHOCCO/issues"
+  },
+  "homepage": "https://github.com/Galelya97/CHOCCO#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.0.0",
+    "cssnano": "^4.1.10",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0"
+  }
+}
