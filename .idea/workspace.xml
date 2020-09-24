@@ -1,70 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="01ee5066-eb24-4150-9011-0497a4f8c2d3" name="Default Changelist" comment="" />
+    <list default="true" id="4560a4cb-e526-4f00-b5ed-ccb607836f04" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectId" id="1hsEC4G3wBK8uJsKUZEuERv8FVu" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../1 week/folder/main/css/layout/base.css" />
-    <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="wsl://UBUNTU2004@/home/galina/.nvm/versions/node/v12.18.0/bin/node" />
-    <property name="prettierjs.PrettierConfiguration.Package" value="\\wsl$\Ubuntu-20.04\home\galina\.nvm\versions\node\v12.18.0\lib\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
-    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="\\wsl$\Ubuntu-20.04\home\galina\code\CHOCCO\main\css\layout" />
-      <recent name="\\wsl$\Ubuntu-20.04\home\galina\code\CHOCCO\main" />
-    </key>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="01ee5066-eb24-4150-9011-0497a4f8c2d3" name="Default Changelist" comment="" />
-      <created>1600791268702</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1600791268702</updated>
-      <workItem from="1600791269812" duration="473000" />
-      <workItem from="1600791774958" duration="7272000" />
-      <workItem from="1600799216261" duration="120000" />
-      <workItem from="1600862948339" duration="1798000" />
-      <workItem from="1600954748700" duration="35000" />
-      <workItem from="1600970023010" duration="926000" />
-    </task>
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1169" y="301" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600863399241">
-      <screen x="0" y="30" width="1920" height="1050" />
-    </state>
-    <state x="1169" y="301" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1600863399241" />
-    <state x="739" y="309" key="FileChooserDialogImpl" timestamp="1600798373448">
-      <screen x="0" y="30" width="1920" height="1050" />
-    </state>
-    <state x="739" y="309" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1600798373448" />
-    <state x="460" y="199" key="SettingsEditor" timestamp="1600795533356">
-      <screen x="0" y="30" width="1920" height="1050" />
-    </state>
-    <state x="460" y="199" key="SettingsEditor/0.30.1920.1050@0.30.1920.1050" timestamp="1600795533356" />
-    <state x="676" y="362" key="jetbrains.nodejs.interpreters-dialog" timestamp="1600795437084">
-      <screen x="0" y="30" width="1920" height="1050" />
-    </state>
-    <state x="676" y="362" key="jetbrains.nodejs.interpreters-dialog/0.30.1920.1050@0.30.1920.1050" timestamp="1600795437084" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
