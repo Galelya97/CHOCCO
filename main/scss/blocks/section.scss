@@ -1,0 +1,24 @@
+.section {
+  height: 100vh;
+  min-height: 650px;
+   display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section__title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #292929;
+}
+
+.section__container {
+  padding: 100px 0;
+}
+
+.benefits__section {
+  background: url("../../img/design-leaf.png") left no-repeat;
+}

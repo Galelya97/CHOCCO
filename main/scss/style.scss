@@ -1,0 +1,92 @@
+//size
+$containerWidth: 940px;
+$baseFontSize: 18px;
+
+//color
+$blue: #61C4D9;
+$darkGreen: #0b4d3c;
+
+//normalize
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
+
+//setup
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap');
+
+//blocks
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/contacts";
+@import "blocks/preview";
+@import "blocks/info-cards";
+@import "blocks/info-card";
+@import "blocks/button";
+@import "blocks/headline";
+@import "blocks/section";
+@import "blocks/benefits";
+@import "blocks/benefit";
+
+html,body, .wrapper {
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: $baseFontSize;
+  line-height: 1.42;
+  margin: 0;
+  color: #666666;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: $containerWidth + 20px;
+}
+
+.container {
+  max-width: $containerWidth;
+  min-height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  width: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+

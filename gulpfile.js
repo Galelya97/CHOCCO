@@ -4,21 +4,41 @@ const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const postcss = require("gulp-postcss");
 const sass = require("gulp-sass");
+const gls = require('gulp-live-server');
 
 // CSS task
-function css() {
-    return gulp
-        .src("./main/scss/**/*.scss")
-        .pipe(sass())
-        .pipe(postcss([autoprefixer(), cssnano()]))
-        .pipe(gulp.dest("./main/css/"))
-}
+// function scss() {
+//     del(["./main/css/**"]);
+//     return gulp
+//         .src("./main/scss/style.scss")
+//         .pipe(sass())
+//         .pipe(postcss([autoprefixer(), cssnano()]))
+//         .pipe(gulp.dest("./main/css/"))
+//         .pipe(server.notify.apply(server, [file]));
+// }
 
 // Clean assets
-function clean() {
-    return del(["./main/css/**", "!./main/css/layout"]);
-}
+// function clean() {
+//     return del(["./main/css/**"]);
+// }
 
-const build = gulp.series(clean, gulp.parallel(css));
+// const build = gulp.series(clean, gulp.parallel(css));
 
-exports.build = build;
+gulp.task('watch', function() {
+    const server = gls.static('main', 5000);
+    server.start();
+    gulp.watch('./main/scss/**/*.scss', function(file) {
+
+        del(["./main/css/**"]);
+        const res = gulp
+            .src("./main/scss/style.scss")
+            .pipe(sass())
+            .pipe(postcss([autoprefixer(), cssnano()]))
+            .pipe(gulp.dest("./main/css/"))
+            .pipe(server.notify.apply(server, [file]));
+
+        return res;
+    });
+});
+
+// exports.build = build;

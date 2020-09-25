@@ -1,0 +1,14 @@
+.info-cards {
+  display: flex;
+}
+
+.info-cards__item {
+  margin-right: 46px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+
+

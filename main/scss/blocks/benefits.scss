@@ -1,0 +1,21 @@
+.benefits {
+  display: flex;
+}
+
+.benefits__item {
+  position: relative;
+  flex: 1;
+  padding-right: 6%;
+  padding-top: 0;
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  &:before {
+    content: url("../../img/circles.png");
+    position: absolute;
+    top: 60px;
+    right: 30px;
+  }
+}
