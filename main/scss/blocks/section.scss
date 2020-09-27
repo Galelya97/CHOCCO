@@ -4,6 +4,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+
+  &:before {
+    content: url("../../img/small fruit.png");
+    position: absolute;
+    bottom: -150px;
+    left: 0;
+  }
+
+  &:after {
+    content: url("../../img/strawberry.png");
+    position: absolute;
+    top: 90px;
+    right: 0;
+  }
 }
 
 .section__title {
