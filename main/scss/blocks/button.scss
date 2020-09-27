@@ -12,15 +12,35 @@
     background: #ffffff;
     color: $darkGreen;
     transition: 0.5s;
-  }
 
-  &:hover {
-    background: $darkGreen;
-    color: #ffffff;
+    &:hover {
+      background: $darkGreen;
+      color: #ffffff;
+    }
   }
 
   &_green {
     background: $darkGreen;
     color: #ffffff;
+    transition: 0.5s;
+
+    &:hover {
+      background: #ffffff;
+      color: $darkGreen;
+    }
+  }
+
+  &_transparent {
+    background: transparent;
+    color: black;
+    text-transform: none;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+
+    &:hover {
+      color: $darkGreen;
+
+    }
   }
 }

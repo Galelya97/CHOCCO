@@ -6,6 +6,10 @@ $baseFontSize: 18px;
 $blue: #61C4D9;
 $darkGreen: #0b4d3c;
 
+//z-index
+
+$z-fixed-menu: 100;
+
 //normalize
 @import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
 
@@ -25,6 +29,12 @@ $darkGreen: #0b4d3c;
 @import "blocks/benefits";
 @import "blocks/benefit";
 @import "blocks/reviews";
+@import "blocks/form";
+@import "blocks/form__controls";
+@import "blocks/radio";
+@import "blocks/footer";
+@import "blocks/socials";
+@import "blocks/fixed-menu";
 
 html,body, .wrapper {
   min-height: 100%;
