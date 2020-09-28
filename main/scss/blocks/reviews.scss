@@ -79,9 +79,14 @@
   width: 74px;
   height: 74px;
   margin-right: 6px;
+  transition: 0.5s;
 
   &:last-child {
     margin-right: 0;
+  }
+
+  &:hover {
+    border-color: #365A49;
   }
 
   &_active {

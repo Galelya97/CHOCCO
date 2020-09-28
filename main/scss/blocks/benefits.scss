@@ -5,17 +5,19 @@
 .benefits__item {
   position: relative;
   flex: 1;
-  padding-right: 6%;
+  padding-right: 52px;
   padding-top: 0;
 
   &:last-child {
     padding-right: 0;
   }
 
-  &:before {
+  &:not(:last-child):after {
     content: url("../../assets/img/circles.png");
     position: absolute;
     top: 60px;
-    right: 30px;
+    width: 70px;
+    right: -9px;
   }
+
 }
