@@ -24,6 +24,7 @@
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
+    "gulp-css-url-adjuster": "^0.2.3",
     "gulp-live-server": "0.0.31",
     "gulp-postcss": "^9.0.0",
     "gulp-sass": "^4.1.0"
