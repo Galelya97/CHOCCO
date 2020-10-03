@@ -4,16 +4,25 @@
 
   &__col {
     flex: 1;
-    margin-right: 26px;
+    margin-right: rem(26px);
 
     &:last-child {
       margin-right: 0;
+    }
+
+    @include tablets {
+      margin-right: 0;
+      margin-bottom: 14px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
   &__row {
     display: flex;
-    margin-bottom: 12px;
+    margin-bottom: rem(12px);
 
     &:last-child {
       margin-bottom: 0;
@@ -22,7 +31,7 @@
 
   &__block {
     flex: 1;
-    margin-right: 20px;
+    margin-right: rem(20px);
 
     &:last-child {
       margin-right: 0;
@@ -31,9 +40,13 @@
 
   &__input {
     width: 100%;
-    padding: 18px 12px;
-    border: 3px solid transparent;
-    border-radius: 4px;
+    padding: rem(18px) rem(12px);
+    border: rem(3px) solid transparent;
+    border-radius: rem(4px);
+
+    @include tablets {
+      padding: rem(7px) rem(12px);
+    }
 
     &:focus {
       border-color: #dee2bd;
@@ -42,58 +55,34 @@
   }
 
   &__input_textarea {
-    height: 152px;
+    height: rem(152px);
     resize: none;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
+
+    @include tablets {
+      height: rem(82px);
+      margin-bottom: rem(14px);
+    }
   }
 
   &__buttons {
-    transform: translate(50%, 30%);
+    display: flex;
+    justify-content: center;
+    //transform: translate(50%, 30%);
+
+    @include tablets {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @include tablets {
+    flex-direction: column;
+    padding: 0 19%;
+    margin-bottom: rem(30px);
+  }
+
+  @include phones {
+    padding: 0;
   }
 }
-
-//.form__col {
-//  flex: 1;
-//  margin-right: 26px;
-//
-//  &:last-child {
-//    margin-right: 0;
-//  }
-//}
-
-//.form__row {
-//  display: flex;
-//  margin-bottom: 12px;
-//}
-
-//.form__block {
-//  flex: 1;
-//  margin-right: 20px;
-//
-//  &:last-child {
-//    margin-right: 0;
-//  }
-//}
-
-//.form__input {
-//  width: 100%;
-//  padding: 18px 12px;
-//  border: 3px solid transparent;
-//  border-radius: 4px;
-//
-//  &:focus {
-//    border-color: #dee2bd;
-//    outline: none;
-//  }
-//}
-
-//.form__input_textarea {
-//  height: 152px;
-//  resize: none;
-//  margin-bottom: 20px;
-//}
-
-//.form__buttons {
-//  display: flex;
-//  justify-content: flex-end;
-//}

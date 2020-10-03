@@ -1,12 +1,28 @@
+.nav {
+  margin: 0 30px;
+  @include tablets {
+    display: none;
+  }
+}
+
 .nav__list {
   display: flex;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  padding: 5px 0;
 }
 
 .nav__item {
-  margin-right: 26px;
+  margin-right: rem(26px);
+  margin-bottom: 4px;
 
   &:last-child {
     margin-right: 0;
   }
 }
+
+.nav__link {
+  white-space: nowrap;
+}
+

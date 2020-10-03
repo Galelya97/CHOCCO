@@ -3,16 +3,20 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: rem(50px);
 }
 
-.headline__title {
-  margin-bottom: 20px;
+.headline .headline__title {
+  margin-bottom: rem(20px);
 }
 
 .headline__subtitle {
   font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  padding: 0 26%;
+  font-size: rem(18px);
+  line-height: rem(22px);
+  padding: 0 23%;
+
+  @include phones {
+    padding: 0 10%;
+  }
 }

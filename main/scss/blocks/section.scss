@@ -1,6 +1,6 @@
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,23 +9,24 @@
 
 .section__title {
   font-weight: 700;
-  font-size: 48px;
-  line-height: 60px;
+  font-size: rem(48px);
+  line-height: rem(60px);
   text-transform: uppercase;
   text-align: center;
   color: #292929;
+  margin-bottom: rem(30px);
 
   &--form {
     color: #365A49;
   }
 
   &__container {
-    padding: 100px 0;
+    padding: rem(100px) 0;
   }
 }
 
 .section__container {
-  padding: 100px 0;
+  //padding: rem(100px) 0;
 }
 
 .benefits__section {
@@ -34,8 +35,20 @@
   &:before {
     position: absolute;
     content: url("../../assets/img/raspberries.png") ;
-    bottom: -80px;
+    bottom: rem(-80px);
     left: 0;
+
+    @include phones {
+      content: none;
+    }
+  }
+
+  @include tablets {
+    background-position: left 14%;
+  }
+
+  @include phones {
+    background: none;
   }
 }
 
@@ -43,14 +56,14 @@
   &:before {
     content: url("../../assets/img/small fruit.png");
     position: absolute;
-    bottom: -150px;
+    bottom: rem(-150px);
     left: 0;
   }
 
   &:after {
     content: url("../../assets/img/strawberry.png");
     position: absolute;
-    top: 90px;
+    top: rem(90px);
     right: 0;
   }
 }
@@ -64,15 +77,29 @@
   &:after {
     content: url("../../assets/img/leaf-fegure.png");
     position: absolute;
-    bottom: 100px;
-    right: 15px;
+    bottom: rem(100px);
+    right: rem(15px);
+
+    @include tablets {
+      content: none;
+    }
   }
 
   &:before {
-    content: url("../../assets/img/blackberry.png");
+    content: "";
+    background: url("../../assets/img/blackberry.png") no-repeat;
+    background-size: contain;
+    width: rem(196px);
+    height: rem(264px);
     position: absolute;
-    top: -164px;
+    top: rem(-164px);
     right: 0;
+
+    @include tablets {
+      width: rem(109.14px);
+      height: rem(147px);
+      top: rem(-80px);
+    }
   }
 }
 

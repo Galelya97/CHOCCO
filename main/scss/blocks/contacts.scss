@@ -4,13 +4,27 @@
 }
 
 .contacts__icon {
-  margin-right: 6px;
-  width: 13px;
-  height: 13px;
+  flex-shrink: 0;
+  margin-right: rem(6px);
+  width: rem(13px);
+  height: rem(13px);
+  fill: #FFFFFF;
+}
+
+.contacts__icon_green {
+  fill: #497870;
 }
 
 .contacts__phone {
   font-weight: 400;
-  font-size: 22px;
-  line-height: 18px;
+  font-size: rem(22px);
+  line-height: rem(18px);
+  white-space: nowrap;
+}
+
+.header__contacts {
+  padding: 5px 0;
+  @include tablets {
+    display: none;
+  }
 }

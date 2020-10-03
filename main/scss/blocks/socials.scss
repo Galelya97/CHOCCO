@@ -3,7 +3,19 @@
   justify-content: space-between;
 }
 
+.socials__link {
+  @include phones {
+    margin-right: 18px;
+  }
+}
+
 .socials__img{
-  width: 20px;
-  height: 20px;
+  width: rem(20px);
+  height: rem(20px);
+  fill: #B3B3B3;
+  transition: 0.5s;
+
+  &:hover {
+    fill: #292929;
+  }
 }

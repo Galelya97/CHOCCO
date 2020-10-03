@@ -1,30 +1,41 @@
 .footer {
-  padding: 18px 0;
-  min-height: 93px;
+  padding: rem(18px) 0;
+  min-height: rem(93px);
 }
 
 .footer__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include phones {
+    flex-direction: column;
+  }
 }
 .footer__address {
   font-weight: 400;
-  font-size: 21px;
-  line-height: 24px;
+  font-size: rem(21px);
+  line-height: rem(24px);
   color: #292929;
-  margin-bottom: 6px;
+  margin-bottom: rem(6px);
 }
 
 .footer__contacts {
   font-weight: 400;
-  font-size: 21px;
-  line-height: 21px;
+  font-size: rem(21px);
+  line-height: rem(21px);
   color: #497870;
 }
 
 .footer__contacts-phone {
   flex: 6;
+
+  @include phones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
 }
 
 .footer__socials {

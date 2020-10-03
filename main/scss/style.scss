@@ -3,41 +3,51 @@ $containerWidth: 940px;
 $baseFontSize: 18px;
 
 //color
-$blue: #61C4D9;
+$blue: #61c4d9;
 $darkGreen: #0b4d3c;
 
 //z-index
-
 $z-fixed-menu: 100;
 
-//blocks
-@import "blocks/header";
-@import "blocks/nav";
-@import "blocks/contacts";
-@import "blocks/preview";
-@import "blocks/info-cards";
-@import "blocks/info-card";
-@import "blocks/button";
-@import "blocks/headline";
-@import "blocks/section";
-@import "blocks/benefits";
-@import "blocks/benefit";
-@import "blocks/reviews";
-@import "blocks/form";
-@import "blocks/form__controls";
-@import "blocks/radio";
-@import "blocks/footer";
-@import "blocks/socials";
-@import "blocks/fixed-menu";
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
 
-html,body, .wrapper {
+//@mixin
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+
+//base
+html {
+  font-size: $baseFontSize;
+
+  @include tablets {
+    font-size: $baseFontSize - 1px;
+  }
+
+  @include phones {
+    font-size: $baseFontSize - 2px;
+  }
+}
+
+html,
+body,
+.wrapper {
   min-height: 100%;
   width: 100%;
 }
 
 body {
-  font-family: 'Alegreya Sans', sans-serif;
-  font-size: $baseFontSize;
+  font-family: "Alegreya Sans", sans-serif;
   line-height: 1.42;
   margin: 0;
   color: #666666;
@@ -51,19 +61,22 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  min-width: $containerWidth + 20px;
 }
 
 .container {
-  width: 100%;
+  width: 95%;
   max-width: $containerWidth;
-  min-height: 100%;
+  //min-height: 100%;
   margin: 0 auto;
-  overflow: hidden;
   position: relative;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
   font-weight: normal;
 }
@@ -95,5 +108,25 @@ img {
   max-width: 100%;
 }
 
-
+//blocks
+@import "blocks/media";
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/contacts";
+@import "blocks/preview";
+@import "blocks/info-cards";
+@import "blocks/info-card";
+@import "blocks/button";
+@import "blocks/headline";
+@import "blocks/section";
+@import "blocks/benefits";
+@import "blocks/benefit";
+@import "blocks/reviews";
+@import "blocks/form";
+@import "blocks/form__controls";
+@import "blocks/radio";
+@import "blocks/footer";
+@import "blocks/socials";
+@import "blocks/fixed-menu";
+@import "blocks/hamburger";
 
