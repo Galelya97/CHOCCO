@@ -19,6 +19,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   overflow: hidden;
   margin-bottom: rem(20px);
 

@@ -25,11 +25,7 @@
   }
 }
 
-.section__container {
-  //padding: rem(100px) 0;
-}
-
-.benefits__section {
+.benefits-section {
   position: relative;
   background: url(../../assets/img/design-leaf.png) left 45% no-repeat;
   &:before {
@@ -52,7 +48,7 @@
   }
 }
 
-.reviews__section {
+.reviews-section {
   &:before {
     content: url("../../assets/img/small fruit.png");
     position: absolute;
@@ -68,7 +64,7 @@
   }
 }
 
-.form__section {
+.form-section {
   position: relative;
   background: url("../../assets/img/bg-form.jpg") no-repeat  ;
   background-size: cover;
@@ -103,8 +99,9 @@
   }
 }
 
-.map__section {
-  background-image: url(../../assets/img/map.png);
-  background-size: 100%;
+.map-section {
+  background-image: url(../../assets/img/map.png) ;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
 }

@@ -4,6 +4,8 @@
   height: 24px;
   width: 26px;
   display: none;
+  position: fixed;
+  right: rem(37px);
 
   @include tablets {
     display: inline-flex;
