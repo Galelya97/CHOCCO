@@ -100,8 +100,6 @@
 }
 
 .map-section {
-  background-image: url(../../assets/img/map.png) ;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  position: relative;
+  justify-content: flex-start;
 }

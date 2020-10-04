@@ -1,6 +1,9 @@
 .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   padding: rem(18px) 0;
-  min-height: rem(93px);
+  height: 10%;
 }
 
 .footer__content {
