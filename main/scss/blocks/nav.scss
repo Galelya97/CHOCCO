@@ -63,6 +63,7 @@
 .nav__burger .nav__link {
   font-size: rem(36px);
   line-height: rem(72px);
+  transition: 300ms;
 
   &:hover {
     opacity:.7;
