@@ -1,5 +1,5 @@
 .nav {
-  margin: 0 30px;
+  margin: 0 rem(30px);
   @include tablets {
     display: none;
   }
@@ -26,3 +26,49 @@
   white-space: nowrap;
 }
 
+.nav__burger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  height: 100%;
+  width: 100%;
+  background: black;
+  margin: 0;
+  transition: 1s;
+  z-index: 1000;
+}
+
+.nav__burger_active {
+  left: 0;
+  opacity:1;
+}
+
+.nav__burger .nav__list {
+  flex-direction: column;
+  color: #FFFFFF;
+}
+
+.nav__burger .nav__item {
+  margin-right: 0;
+  margin-bottom: rem(20px);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.nav__burger .nav__link {
+  font-size: rem(36px);
+  line-height: rem(72px);
+
+  &:hover {
+    opacity:.7;
+  }
+}
+
+.body__burger-active {
+  overflow:hidden;
+}

@@ -6,6 +6,7 @@
   display: none;
   position: fixed;
   right: rem(37px);
+  z-index: 1500;
 
   @include tablets {
     display: inline-flex;
@@ -17,4 +18,32 @@
   background: #FFFFFF;
   height: 4px;
   border-radius: 10px;
+  transition: 300ms ease-in-out;
+}
+
+.hamburger__plank {
+  &:nth-child(2) {
+    transform: rotate(0deg);
+  }
+
+  &:nth-child(3) {
+    transform: rotate(0deg) translateY(0px) translateX(0px);
+  }
+}
+
+.hamburger_active {
+  .hamburger__plank {
+    &:nth-child(1) {
+      opacity: 0;
+    }
+
+    &:nth-child(2) {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg) translateY(-7px) translateX(7px);
+    }
+
+  }
 }

@@ -33,7 +33,7 @@
     content: url("../../assets/img/raspberries.png") ;
     bottom: rem(-80px);
     left: 0;
-    z-index: 1000;
+    z-index: 500;
 
     @include phones {
       content: none;
