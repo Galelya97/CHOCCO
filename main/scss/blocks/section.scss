@@ -33,6 +33,7 @@
     content: url("../../assets/img/raspberries.png") ;
     bottom: rem(-80px);
     left: 0;
+    z-index: 1000;
 
     @include phones {
       content: none;
@@ -45,6 +46,25 @@
 
   @include phones {
     background: none;
+  }
+}
+
+.select-section {
+  position: relative;
+  background: #F8FAF9;
+
+  &:before {
+    content: url("../../assets/img/slider-after.png");
+    position: absolute;
+    bottom: -186px;
+    right: 0;
+  }
+
+  &:after {
+    content: url("../../assets/img/slider-before.png");
+    position: absolute;
+    bottom: -60px;
+    right: 14px;
   }
 }
 
