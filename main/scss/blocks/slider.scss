@@ -83,7 +83,7 @@
   }
 }
 
-.product__title > span {
+.product__title span {
   @include phones {
     display: block;
   }

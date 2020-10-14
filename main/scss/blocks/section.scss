@@ -74,6 +74,14 @@
     position: absolute;
     bottom: rem(-150px);
     left: 0;
+    z-index: 500;
+
+    @include tablets {
+      width: rem(118px);
+      height: rem(170px);
+      bottom: rem(-25px);
+      left: rem(-30px);
+    }
   }
 
   &:after {
@@ -81,6 +89,13 @@
     position: absolute;
     top: rem(90px);
     right: 0;
+
+    @include tablets {
+      width: rem(136px);
+      height: rem(78px);
+      top: 0;
+      right: rem(-25px);
+    }
   }
 }
 
