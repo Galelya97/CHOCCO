@@ -62,7 +62,6 @@
 
 .dropdown__item {
   display: flex;
-  align-items: center;
   justify-content: flex-start;
   margin-bottom: rem(30px);
 
@@ -75,11 +74,11 @@
   flex-shrink: 0;
   width: rem(32px);
   height: rem(20px);
+  margin-bottom: rem(24px);
 }
 
 .dropdown__title {
   flex-grow: 1;
-  margin-bottom: rem(24px);
 }
 
 .dropdown__desc {
