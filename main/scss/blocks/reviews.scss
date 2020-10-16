@@ -30,8 +30,27 @@
   }
 }
 
+.reviews__list {
+  position: relative;
+  min-height: rem(348px);
+}
+
 .reviews__inner {
   display: flex;
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.5s;
+
+  &_active {
+  opacity: 1;
+  pointer-events: unset;
+
+  }
 
   @include tablets {
     flex-direction: column;
