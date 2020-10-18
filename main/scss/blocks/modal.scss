@@ -1,0 +1,36 @@
+.modal {
+  display: none;
+  width: rem(309px);
+  height: rem(201px);
+  background-color: #FFFFFF;
+}
+
+.modal__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__title {
+  font-weight: 500;
+  color: black;
+  margin-bottom: rem(18px);
+}
+
+.modal__button {
+  align-self: flex-end;
+  background-color: transparent;
+  border: none;
+  fill: #b3b3b3;
+  transition: 0.5s;
+
+  &:hover {
+    fill: black;
+  }
+}
+
+.modal__icon {
+  width: 12px;
+  height: 12px;
+}
