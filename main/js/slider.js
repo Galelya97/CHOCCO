@@ -11,10 +11,10 @@ function loop(direction, a){
     }
 };
 
-$(".arrows__left").click((a) => {
-    loop("right", a)
+$(".arrows__right").click((a) => {
+    loop("right", a);
 });
 
-$(".arrows__right").click((a) => {
+$(".arrows__left").click((a) => {
     loop("left", a);
 });
