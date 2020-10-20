@@ -57,6 +57,8 @@ $(".forms").submit( e => {
                     src: "#modal",
                     type: "inline"
                 });
+
+                $('.forms').trigger('reset');
             },
             error: data => {
                 console.log('fghj');
