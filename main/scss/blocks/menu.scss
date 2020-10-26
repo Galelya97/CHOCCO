@@ -34,7 +34,7 @@
   width: rem(102px);
   height: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 
   &_bg-one {
@@ -78,7 +78,8 @@
 }
 
 .menu__link > span{
-  transform: rotate(-90deg) translate(240px, 0px);
+  transform: rotate(-90deg);
+  transform-origin: unset;
   display: block;
   white-space: nowrap;
 }
