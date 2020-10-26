@@ -57,6 +57,7 @@ $(".forms").submit( e => {
                     src: "#modal",
                     type: "inline"
                 });
+                
                 $(".forms")[0].reset();
             },
             error: data => {

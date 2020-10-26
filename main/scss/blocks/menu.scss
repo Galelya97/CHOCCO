@@ -1,0 +1,127 @@
+.menu__wrapper-title {
+  display: flex;
+}
+
+.menu__title {
+  font-weight: 700;
+  font-size: rem(48px);
+  line-height: rem(58px);
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.menu__list {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: 100;
+}
+
+.menu__item {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+}
+
+.menu__link {
+  position: relative;
+  font-weight: 700;
+  font-size: rem(48px);
+  line-height: rem(58px);
+  color: #FFFFFF;
+  width: rem(102px);
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  &_bg-one {
+    background: url("../../assets/img/bg-menu-item-1.png")center center /cover no-repeat;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.4;
+      background: black;
+    }
+  }
+
+  &_bg-two {
+    background: url("../../assets/img/bg-menu-item-2.png")center center /cover no-repeat;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.4;
+      background: black;
+    }
+  }
+
+  &_bg-three {
+    background: url("../../assets/img/bg-menu-item-3.png")center center /cover no-repeat;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.6;
+      background: black;
+    }
+  }
+}
+
+.menu__link > span{
+  transform: rotate(-90deg) translate(240px, 0px);
+  display: block;
+  white-space: nowrap;
+}
+
+
+.menu__content {
+  opacity: 0;
+  width: 0;
+  background: rgba(51, 53, 55, 0.9);
+  backdrop-filter: blur(2px);
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  visibility: hidden;
+}
+
+.menu__box {
+  padding: 30px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  //min-width: rem(524px);
+}
+
+.menu__content-close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu__icon {
+  width: rem(15px);
+  height: rem(15px);
+  fill: #666666;
+}
+
+.menu__text {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #FFFFFF;
+}
+
+.menu-section-container {
+  height: 70%;
+}

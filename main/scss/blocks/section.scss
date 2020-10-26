@@ -68,6 +68,21 @@
   }
 }
 
+.menu-section {
+  position: relative;
+  background: url("../../assets/img/bg-menu.png") center center no-repeat;
+  background-size: cover;
+
+  &:before {
+    content: "";
+    position: absolute;
+    background: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+  }
+}
+
 .reviews-section {
   &:before {
     content: url("../../assets/img/small fruit.png");
