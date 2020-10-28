@@ -11,7 +11,9 @@
 }
 
 .menu__list {
+  width: 100%;
   display: flex;
+  justify-content: flex-end;
   position: absolute;
   top: 0;
   right: 0;
@@ -20,9 +22,20 @@
 }
 
 .menu__item {
+  height: 100%;
   display: flex;
-  width: 100%;
   cursor: pointer;
+}
+
+.menu__item_active {
+
+  @include phones {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+  }
 }
 
 .menu__link {
@@ -34,8 +47,8 @@
   width: rem(102px);
   height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-start;
 
   &_bg-one {
     background: url("../../assets/img/bg-menu-item-1.png")center center /cover no-repeat;
@@ -79,11 +92,11 @@
 
 .menu__link > span{
   transform: rotate(-90deg);
-  transform-origin: unset;
+  transform-origin: left top;
   display: block;
   white-space: nowrap;
+  margin-left: 20px;
 }
-
 
 .menu__content {
   opacity: 0;
@@ -93,6 +106,16 @@
   overflow: hidden;
   transition: 0.5s ease-in-out;
   visibility: hidden;
+
+  @include phones {
+    transition: none;
+  }
+
+  &_active {
+    opacity: 1;
+    width: 0;
+    visibility: visible;
+  }
 }
 
 .menu__box {
@@ -100,7 +123,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  //min-width: rem(524px);
 }
 
 .menu__content-close {
