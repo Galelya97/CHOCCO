@@ -3,6 +3,9 @@ const display = $(".maincontent");
 const sideMenu = $(".fixed-menu");
 const menuItems = sideMenu.find(".fixed-menu__item");
 
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
+
 let inScroll = false;
 
 sections.first().addClass("active");
@@ -114,15 +117,14 @@ $("[data-scroll-to]").click((e) => {
   performTransition(reqSection.index());
 });
 
-//https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
-$("body").swipe({
-  swipe: function (event, direction) {
-    const scroller = scrollViewport();
-    let scrollDirection = "";
+if(isMobile) {
+  //https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+  $("body").swipe({
+    swipe: function (event, direction) {
+      if(direction === "up") scrollViewport("next");
+      if(direction === "down") scrollViewport("prev");
+    },
+  });
+}
 
-    if(direction === "up") scrollDirection = "next";
-    if(direction === "down") scrollDirection = "prev";
 
-    scroll[scrollDirection]();
-  },
-});
