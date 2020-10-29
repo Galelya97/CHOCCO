@@ -19,19 +19,19 @@
   <body>
     <div class="wrapper">
       <div class="maincontent">
-        <section class="preview">
+        <section data-set-id="preview" data-fixed-color="white" class="preview">
           <div class="preview__container container">
             <header class="header">
               <img src="assets/img/logo.svg" alt="logo" class="header__logo logo" />
               <nav class="header__nav nav">
                 <ul class="nav__list">
-                  <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Батончики</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Команда</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Меню</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Как мы работаем</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Контакты </a></li>
+                  <li data-scroll-to="benefits" class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+                  <li data-scroll-to="select" class="nav__item"><a href="#" class="nav__link">Батончики</a></li>
+                  <li data-scroll-to="team" class="nav__item"><a href="#" class="nav__link">Команда</a></li>
+                  <li data-scroll-to="menu" class="nav__item"><a href="#" class="nav__link">Меню</a></li>
+                  <li data-scroll-to="reviews" class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
+                  <li data-scroll-to="video" class="nav__item"><a href="#" class="nav__link">Как мы работаем</a></li>
+                  <li data-scroll-to="map" class="nav__item"><a href="#" class="nav__link">Контакты </a></li>
                 </ul>
               </nav>
               <a href="tel:+78009039090" class="header__contacts contacts">
@@ -51,28 +51,25 @@
               <p class="preview__description">
                 Наши батончики идеально подходят для тех, кто следит за своим здоровьем
               </p>
-              <button href="#" class="preview__button button button_white">Заказать</button>
+              <button data-scroll-to="form" href="#" class="preview__button button button_white">Заказать</button>
             </div>
             <div class="preview__info">
               <ul class="info-cards">
                 <li class="info-cards__item info-card">
                   <svg class="info-card__icon">
                     <use xlink:href="./sprite.svg#leaves"></use>
-                    <!--                    <img src="assets/icons/5.svg" alt="leaves" class="info-card__img icon" />-->
                   </svg>
                   <div class="info-card__desc">100% натуральный продукт</div>
                 </li>
                 <li class="info-cards__item info-card">
                   <svg class="info-card__icon">
                     <use xlink:href="./sprite.svg#delivery"></use>
-                    <!--                    <img src="assets/icons/6.svg" alt="delivery" class="info-card__img icon" />-->
                   </svg>
                   <div class="info-card__desc">3-5 дней доставка по РФ</div>
                 </li>
                 <li class="info-cards__item info-card">
                   <svg class="info-card__icon">
                     <use xlink:href="./sprite.svg#fit"></use>
-                    <!--                    <img src="assets/icons/4.svg" alt="fit" class="info-card__img icon" />-->
                   </svg>
                   <div class="info-card__desc">Не портит фигуру</div>
                 </li>
@@ -80,7 +77,7 @@
             </div>
           </div>
         </section>
-        <section class="benefits-section section">
+        <section data-set-id="benefits" data-fixed-color="black" class="benefits-section section">
           <div class="section__container container">
             <div class="headline">
               <h2 class="headline__title section__title">почему chocco?</h2>
@@ -133,7 +130,7 @@
             </ul>
           </div>
         </section>
-        <section class="select-section section">
+        <section data-set-id="select" data-fixed-color="black" class="select-section section">
           <div class="section__container container">
             <div class="slider">
               <div class="slider__arrows arrows">
@@ -230,7 +227,7 @@
                         </div>
                         <div class="product__order">
                           <div class="product__price">140 ₽</div>
-                          <div class="product__btn button button_green">ЗАКАЗАТЬ</div>
+                          <div data-scroll-to="form" class="product__btn button button_green">заказать</div>
                         </div>
                       </div>
                     </div>
@@ -322,7 +319,7 @@
                         </div>
                         <div class="product__order">
                           <div class="product__price">140 ₽</div>
-                          <div class="product__btn button button_green">ЗАКАЗАТЬ</div>
+                          <div data-scroll-to="form" class="product__btn button button_green">заказать</div>
                         </div>
                       </div>
                     </div>
@@ -339,7 +336,7 @@
             </div>
           </div>
         </section>
-        <section class="team-section section">
+        <section data-set-id="team" data-fixed-color="black" class="team-section section">
           <div class="section__container container">
             <h2 class="section__title">команда</h2>
             <ul class="team team_desktop">
@@ -468,7 +465,7 @@
             </ul>
           </div>
         </section>
-        <section class="menu-section section">
+        <section data-set-id="menu" data-fixed-color="white" class="menu-section section">
           <ul class="menu__list">
             <li class="menu__item">
               <div class="menu__link menu__link_bg-one">
@@ -476,13 +473,14 @@
               </div>
               <div class="menu__content">
                 <div class="menu__box">
-<!--                  <button type="button" class="menu__content-close">-->
-<!--                    <svg class="menu__icon">-->
-<!--                      <use xlink:href="./sprite.svg#close"></use>-->
-<!--                    </svg>-->
-<!--                  </button>-->
+                  <!--                  <button type="button" class="menu__content-close">-->
+                  <!--                    <svg class="menu__icon">-->
+                  <!--                      <use xlink:href="./sprite.svg#close"></use>-->
+                  <!--                    </svg>-->
+                  <!--                  </button>-->
                   <div class="menu__text">
-                    <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и
+                    <p>
+                      Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и
                       полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как
                       классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не
                       похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.
@@ -497,13 +495,14 @@
               </div>
               <div class="menu__content">
                 <div class="menu__box">
-<!--                  <button type="button" class="menu__content-close">-->
-<!--                    <svg class="menu__icon">-->
-<!--                      <use xlink:href="./sprite.svg#close"></use>-->
-<!--                    </svg>-->
-<!--                  </button>-->
+                  <!--                  <button type="button" class="menu__content-close">-->
+                  <!--                    <svg class="menu__icon">-->
+                  <!--                      <use xlink:href="./sprite.svg#close"></use>-->
+                  <!--                    </svg>-->
+                  <!--                  </button>-->
                   <div class="menu__text">
-                    <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и
+                    <p>
+                      Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и
                       полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как
                       классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не
                       похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.
@@ -518,13 +517,14 @@
               </div>
               <div class="menu__content">
                 <div class="menu__box">
-<!--                  <button type="button" class="menu__content-close">-->
-<!--                    <svg class="menu__icon">-->
-<!--                      <use xlink:href="./sprite.svg#close"></use>-->
-<!--                    </svg>-->
-<!--                  </button>-->
+                  <!--                  <button type="button" class="menu__content-close">-->
+                  <!--                    <svg class="menu__icon">-->
+                  <!--                      <use xlink:href="./sprite.svg#close"></use>-->
+                  <!--                    </svg>-->
+                  <!--                  </button>-->
                   <div class="menu__text">
-                    <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и
+                    <p>
+                      Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и
                       полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как
                       классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не
                       похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.
@@ -540,7 +540,7 @@
             </div>
           </div>
         </section>
-        <section class="reviews-section section">
+        <section data-set-id="reviews" data-fixed-color="black" class="reviews-section section">
           <div class="section__container container">
             <h2 class="section__title">отзывы</h2>
             <div class="reviews">
@@ -617,10 +617,28 @@
             </div>
           </div>
         </section>
-        <section class="media-section section">
-          <div class="section__container container"></div>
+        <section data-set-id="video" data-fixed-color="black" class="video-section section">
+          <div class="section__container container">
+            <h2 class="section__title">как мы работаем</h2>
+            <div class="video">
+                <div class="video__player">
+                  <div id="video" class="video__media"></div>
+                  <div class="video__poster"></div>
+                  <div class="video__controls">
+                    <button class="video__start"></button>
+                    <div class="video__playback">
+                      <button class="video__playback-button"></button>
+                    </div>
+                    <div class="video__duration">
+                      <span class="video__duration-completed">0:00</span>
+                      <span class="video__duration-estimate">0:00</span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
         </section>
-        <section class="form-section section">
+        <section data-set-id="form" data-fixed-color="black" class="form-section section">
           <div class="section__container container">
             <h2 class="section__title section__title--form">закажите доставку</h2>
             <form class="forms">
@@ -706,7 +724,7 @@
             </div>
           </div>
         </section>
-        <section class="map-section section">
+        <section data-set-id="map" data-fixed-color="black" class="map-section section">
           <div class="map" id="map"></div>
           <footer class="footer">
             <div class="container">
@@ -751,26 +769,26 @@
     </div>
     <nav class="fixed-menu">
       <ul class="fixed-menu__list">
-        <li class="fixed-menu__item fixed-menu__item_active"><a href="#" class="fixed-menu__link"></a></li>
-        <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
-        <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
-        <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
-        <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
-        <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
-        <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
-        <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
-        <li class="fixed-menu__item"><a href="#" class="fixed-menu__link"></a></li>
+        <li class="fixed-menu__item fixed-menu__item_active"><a href="#" data-scroll-to="preview" class="fixed-menu__link"></a></li>
+        <li class="fixed-menu__item"><a href="#" data-scroll-to="benefits" class="fixed-menu__link"></a></li>
+        <li class="fixed-menu__item"><a href="#" data-scroll-to="select" class="fixed-menu__link"></a></li>
+        <li class="fixed-menu__item"><a href="#" data-scroll-to="team" class="fixed-menu__link"></a></li>
+        <li class="fixed-menu__item"><a href="#" data-scroll-to="menu" class="fixed-menu__link"></a></li>
+        <li class="fixed-menu__item"><a href="#" data-scroll-to="reviews" class="fixed-menu__link"></a></li>
+        <li class="fixed-menu__item"><a href="#" data-scroll-to="video" class="fixed-menu__link"></a></li>
+        <li class="fixed-menu__item"><a href="#" data-scroll-to="form" class="fixed-menu__link"></a></li>
+        <li class="fixed-menu__item"><a href="#" data-scroll-to="map" class="fixed-menu__link"></a></li>
       </ul>
     </nav>
     <div class="nav__burger" id="nav__burger">
       <ul class="nav__list">
-        <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Батончики</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Команда</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Меню</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Как мы работаем</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Контакты </a></li>
+        <li class="nav__item"><a href="#" class="nav__link nav__link-burger">О нас</a></li>
+        <li class="nav__item"><a href="#" class="nav__link nav__link-burger">Батончики</a></li>
+        <li class="nav__item"><a href="#" class="nav__link nav__link-burger">Команда</a></li>
+        <li class="nav__item"><a href="#" class="nav__link nav__link-burger">Меню</a></li>
+        <li class="nav__item"><a href="#" class="nav__link nav__link-burger">Отзывы</a></li>
+        <li class="nav__item"><a href="#" class="nav__link nav__link-burger">Как мы работаем</a></li>
+        <li class="nav__item"><a href="#" class="nav__link nav__link-burger">Контакты </a></li>
       </ul>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -786,5 +804,6 @@
     <script src="js/menu.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/map.js"></script>
+    <script src="js/ops.js"></script>
   </body>
 </html>

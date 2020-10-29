@@ -42,7 +42,7 @@ html {
 html,
 body,
 .wrapper {
-  min-height: 100%;
+  height: 100%;
   width: 100%;
 }
 
@@ -61,6 +61,12 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+.maincontent {
+  height: 100%;
+  transition: transform 1s;
+  will-change: transform;
 }
 
 .container {
@@ -137,4 +143,5 @@ img {
 @import "blocks/team";
 @import "blocks/modal";
 @import "blocks/menu";
+@import "blocks/video";
 

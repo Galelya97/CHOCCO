@@ -1,6 +1,6 @@
 const burger = document.querySelector(".hamburger");
 const navBurger = document.querySelector(".nav__burger");
-const link = document.querySelectorAll(".nav__link");
+const link = document.querySelectorAll(".nav__link-burger");
 const body = document.querySelector("body");
 
 link.forEach(function (elem){

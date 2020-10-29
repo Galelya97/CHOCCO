@@ -1,0 +1,37 @@
+.video {
+  display: flex;
+  justify-content: center;
+}
+
+.video__player {
+  overflow: hidden;
+  max-width: 662px;
+  width: 100%;
+  margin: 0 22px;
+}
+
+.video__poster {
+  position: relative;
+  background: url("../../assets/img/player-poster.png") center center no-repeat;
+  background-size: cover;
+  min-height: 233.2px;
+
+  //  &:before {
+  //    content: "";
+  //    position: absolute;
+  //    min-width: 662px;
+  //    min-height: 391.82px;
+  //    background-color: black;
+  //    opacity: 0.2;
+  //  }
+}
+
+
+
+
+
+.video__controls {
+  display: flex;
+  background: #404040;
+  min-height: 34.89px;
+}
