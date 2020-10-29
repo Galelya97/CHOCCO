@@ -1,41 +1,59 @@
 const sections = $("section");
 const display = $(".maincontent");
+const sideMenu = $(".fixed-menu");
+const menuItems = sideMenu.find(".fixed-menu__item");
 
 let inScroll = false;
 
 sections.first().addClass("active");
 
+const countSectionPosition = (sectionsEq) => {
+  const position = sectionsEq * -100;
+
+  if (isNaN(position)) {
+    console.error("передано не верное значение в countSectionPosition");
+    return 0;
+  }
+  return position;
+};
+
+const changeMenuColorFixed = (sectionsEq) => {
+  const currrentSection = sections.eq(sectionsEq);
+  const menuColor = currrentSection.attr("data-fixed-color");
+  const activeClass = "fixed-menu_black";
+
+  if (menuColor === "black") {
+    sideMenu.addClass(activeClass);
+  } else {
+    sideMenu.removeClass(activeClass);
+  }
+};
+
+const resetActiveClassForItem = (items, itemEq, activeClass) => {
+  items.eq(itemEq).addClass(activeClass).siblings().removeClass(activeClass);
+};
+
 const performTransition = (sectionsEq) => {
   if (inScroll === false) {
+    const transitionOver = 1000;
+    const mouseInertiaOver = 300;
+
     inScroll = true;
-    const position = sectionsEq * -100;
 
-    const currrentSection = sections.eq(sectionsEq);
-    const menuColor = currrentSection.attr("data-fixed-color");
-    const sideMenu = $(".fixed-menu");
+    const position = countSectionPosition(sectionsEq);
 
-    if (menuColor === "black") {
-      sideMenu.addClass("fixed-menu_black");
-    } else {
-      sideMenu.removeClass("fixed-menu_black");
-    }
+    changeMenuColorFixed(sectionsEq);
 
     display.css({
       transform: `translateY(${position}%)`,
     });
 
-    sections.eq(sectionsEq).addClass("active").siblings().removeClass("active");
+    resetActiveClassForItem(sections, sectionsEq, "active");
 
     setTimeout(() => {
       inScroll = false;
-
-        sideMenu
-            .find(".fixed-menu__item")
-            .eq(sectionsEq)
-            .addClass("fixed-menu__item_active")
-            .siblings()
-            .removeClass("fixed-menu__item_active");
-    }, 1300);
+      resetActiveClassForItem(menuItems, sectionsEq, "fixed-menu__item_active");
+    }, transitionOver + mouseInertiaOver);
   }
 };
 
@@ -69,8 +87,9 @@ $(window).on("wheel", (e) => {
 
 $(window).on("keydown", (e) => {
   const tagName = e.target.tagName.toLowerCase();
+  const userTypingInInputs = tagName !== "input" && tagName !== "textarea";
 
-  if (tagName !== "input" && tagName !== "textarea") {
+  if (userTypingInInputs) {
     switch (e.keyCode) {
       case 38: //prev
         scrollViewport("prev");
@@ -83,6 +102,8 @@ $(window).on("keydown", (e) => {
   }
 });
 
+$(".wrapper").on("touchmove", e => e.preventDefault());
+
 $("[data-scroll-to]").click((e) => {
   e.preventDefault();
 
@@ -91,4 +112,17 @@ $("[data-scroll-to]").click((e) => {
   const reqSection = $(`[data-set-id=${target}]`);
 
   performTransition(reqSection.index());
+});
+
+//https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+$("body").swipe({
+  swipe: function (event, direction) {
+    const scroller = scrollViewport();
+    let scrollDirection = "";
+
+    if(direction === "up") scrollDirection = "next";
+    if(direction === "down") scrollDirection = "prev";
+
+    scroll[scrollDirection]();
+  },
 });
