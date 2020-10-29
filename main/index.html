@@ -621,20 +621,27 @@
           <div class="section__container container">
             <h2 class="section__title">как мы работаем</h2>
             <div class="video">
+              <div class="video__wrapper">
                 <div class="video__player">
                   <div id="video" class="video__media"></div>
                   <div class="video__poster"></div>
                   <div class="video__controls">
-                    <button class="video__start"></button>
+                    <button class="video__start">
+                      <svg class="video__start-button">
+                        <use xlink:href="./sprite.svg#play"></use>
+                      </svg>
+                    </button>
                     <div class="video__playback">
                       <button class="video__playback-button"></button>
                     </div>
                     <div class="video__duration">
-                      <span class="video__duration-completed">0:00</span>
-                      <span class="video__duration-estimate">0:00</span>
+                      <span class="video__duration-completed">00:00</span>
+                      <span>/</span>
+                      <span class="video__duration-estimate">00:00</span>
                     </div>
                   </div>
                 </div>
+            </div>
             </div>
           </div>
         </section>
@@ -782,13 +789,13 @@
     </nav>
     <div class="nav__burger" id="nav__burger">
       <ul class="nav__list">
-        <li class="nav__item"><a href="#" class="nav__link nav__link-burger">О нас</a></li>
-        <li class="nav__item"><a href="#" class="nav__link nav__link-burger">Батончики</a></li>
-        <li class="nav__item"><a href="#" class="nav__link nav__link-burger">Команда</a></li>
-        <li class="nav__item"><a href="#" class="nav__link nav__link-burger">Меню</a></li>
-        <li class="nav__item"><a href="#" class="nav__link nav__link-burger">Отзывы</a></li>
-        <li class="nav__item"><a href="#" class="nav__link nav__link-burger">Как мы работаем</a></li>
-        <li class="nav__item"><a href="#" class="nav__link nav__link-burger">Контакты </a></li>
+        <li data-scroll-to="benefits" class="nav__item"><a href="#" class="nav__link nav__link-burger">О нас</a></li>
+        <li data-scroll-to="select" class="nav__item"><a href="#" class="nav__link nav__link-burger">Батончики</a></li>
+        <li data-scroll-to="team" class="nav__item"><a href="#" class="nav__link nav__link-burger">Команда</a></li>
+        <li data-scroll-to="menu" class="nav__item"><a href="#" class="nav__link nav__link-burger">Меню</a></li>
+        <li data-scroll-to="reviews" class="nav__item"><a href="#" class="nav__link nav__link-burger">Отзывы</a></li>
+        <li data-scroll-to="video" class="nav__item"><a href="#" class="nav__link nav__link-burger">Как мы работаем</a></li>
+        <li data-scroll-to="map" class="nav__item"><a href="#" class="nav__link nav__link-burger">Контакты </a></li>
       </ul>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -807,5 +814,7 @@
     <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mobile-detect@1.4.4/mobile-detect.min.js"></script>
     <script src="js/ops.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="js/video.js"></script>
   </body>
 </html>
